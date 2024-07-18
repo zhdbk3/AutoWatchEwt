@@ -1,10 +1,16 @@
 import os
 import time
+import random
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import ElementNotInteractableException
 import config
+
+
+def delay() -> None:
+    """随机延迟一会，范围：基础延迟时间 ~ 基础延迟时间 + 2"""
+    time.sleep(config.base_delay_s + random.random() * 2)
 
 
 def watch() -> None:
@@ -19,7 +25,7 @@ def watch() -> None:
     browser.find_element(By.CLASS_NAME, 'ant-btn-block').submit()
 
     # 点击即刻开启
-    time.sleep(3)
+    delay()
     browser.find_element(By.CLASS_NAME, 'ant-btn-primary').click()
     # 点击加载更多（不一定有）
     try:
@@ -28,7 +34,7 @@ def watch() -> None:
     except ElementNotInteractableException:
         pass
     # 查找所有"去学习"按钮
-    time.sleep(1)
+    delay()
     buttons = browser.find_elements(By.CLASS_NAME, 'operate-btn-2TCuM')
     print('找到了', len(buttons), '节课')
 

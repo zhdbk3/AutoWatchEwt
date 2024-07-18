@@ -14,9 +14,9 @@
 - [Chrome驱动文件下载(chromedriver)](https://chromedriver.storage.googleapis.com/index.html)
 - [Firefox驱动文件下载(geckodriver)](https://github.com/mozilla/geckodriver/releases)
 
-**请确保驱动程序版本与浏览器版本一致**
+**请确保驱动程序版本与浏览器版本一致。**
 
-**解压后**，将驱动程序放在你喜欢的地方
+**解压后**，将驱动程序放您你喜欢的地方。
 
 ### 2. 修改配置文件
 
@@ -27,6 +27,7 @@
 - lesson_list_url: 课程列表链接
 - username: 您的用户名
 - password: 您的密码
+- base_delay_s: 基础延迟时间/s，若您的网络环境不好导致程序无法正常使用，请尝试增大它
 
 ### 3. AutoWatchEwt，启动！
 
